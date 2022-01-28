@@ -1,5 +1,15 @@
-from pythonisms import __version__
+from operator import contains
+from pythonisms.pythonisms import Animal
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+def test_init():
+    assert Animal
+    
+def test_object():
+    kingKong = Animal('gorilla', 'King Kong')
+    assert str(kingKong) == 'I am a gorilla my name is King Kong'
+    
+def test_object_len():
+    kingKong = Animal('gorilla', 'King Kong')
+    assert len(kingKong) == 9
+    
